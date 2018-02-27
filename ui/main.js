@@ -4,6 +4,13 @@ var text=document.getElementById('main-text');
 text.innerHTML = 'New Value';
 var img= document.getElementById('madi');
 
+var pos = 0;
+
+function moveright(){
+    pos += 5;
+    img.style.marginLeft = pos + 'px';
+}
+
 img.onclick= function(){
-    img.style.marginLeft = '100px';
+    var interval = setInterval(moveright,100);
 };
